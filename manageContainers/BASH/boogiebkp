@@ -1,0 +1,15 @@
+#!/bin/bash
+
+lxc stop boogiepitcloudOld
+
+lxc publish boogiepitcloudOld --alias boogiepitcloud1
+
+lxc start boogiepitcloudOld
+
+cd /media/uldarik/DATA/BackupLxdBtrfs/boogiepitcloudbkp/
+
+NOW=$( date '+%F_%H' )
+
+lxc image export boogiepitcloud1 ./BooPiClBKPlast
+
+lxc image delete boogiepitcloud

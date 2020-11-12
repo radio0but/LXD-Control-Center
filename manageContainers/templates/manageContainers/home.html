@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'manageContainers/style.css' %}">
+		<link rel="icon" 
+      type="image/png" 
+      href="https://upload.wikimedia.org/wikipedia/commons/4/40/Linux_Containers_logo.png"/>
+		<style>
+			#cpuPercentBar {
+			width: {{ cpuPercent }}%;
+			height: 30px;
+			background-color: green;
+			}
+			#memoryPercentBar {
+			width: {{ memoryPercent }}%;
+			height: 30px;
+			background-color: red;
+			}
+		</style>
+		<title>
+			{{hostName}}'s LXD Control Center
+		</title>
+	</head>
+	<body>
+		<div class="header">
+			<a href="https://lxc.lebelou.ga">
+				<img width=180px height=180px style="  " src="https://upload.wikimedia.org/wikipedia/commons/4/40/Linux_Containers_logo.png">
+				</img>
+				<h1>{{hostName}}'s LXD Control Center</h1>
+			</a>
+		</div>
+		<div class="row">
+		<div class="column1" >
+			<button class="accordion">
+				<h3>Manage Container</h3>
+			</button>
+			<div style="text-align: left;" class="panel">
+				<form action="output" method="post">      
+					{% csrf_token %}
+					<br>
+					<h3>Select a container</h3>
+					{{ htmlContainersFull | safe }}<br><br>
+					
+					<input class="button" onclick="return confirm('You\'re about to stop a container, \nare you sure you wanna do that ?')" type="submit" value="Stop" name="_stop"><br> <br>
+					<input class="button" onclick="return confirm('You\'re about to start a container, \nare you sure you wanna do that ?')" type="submit" value="Start" name="_start"><br><br>
+					<input class="button" onclick="return confirm('You\'re about to restart a container, \nare you sure you wanna do that ?')"type="submit" value="Restart" name="_restart"><br><br>
+					<input class="button" onclick="return confirm('You\'re about to delete a container, \nare you sure you wanna do that ?')"type="submit" value="Delete" name="_delete"><br><br>
+			</div>
+			</form>
+			<button class="accordion">
+				<h3>Create Container</h3>
+			</button>
+			<div class="panel">
+				<form action="output" method="post">
+					{% csrf_token %}
+					<br>Container Name
+					<input type="text" name="ContainerName" ><br><br>
+					<img width=64px height=64px src="https://www.softexia.com/wp-content/uploads/2016/01/ubuntu_logo_256x256.png"/>
+					<input class="button" onclick="return confirm('You\'re about to launch an Ubuntu container, \nare you sure you wanna do that ?')" height=64px type="submit" value="Ubuntu:X" name="_launchubuntu"><br><br>
+					<br>
+					<img width=64px height=64px src="https://www.softexia.com/wp-content/uploads/2015/04/CentOS-7-logo-256x256.png"/>
+					<input class="button" onclick="return confirm('You\'re about to launch a CentOS 7 container, \nare you sure you wanna do that ?')" height=64px type="submit" value="CentOS 7" name="_launchcentos"><br><br>
+					<br>
+					<img width=64px height=64px src="https://thelinuxexperiment.com/blog/wp-content/uploads/2017/08/arch.png"/>
+					<input class="button" onclick="return confirm('You\'re about to launch an Arch Linux   container, \nare you sure you wanna do that ?')" height=64px type="submit" value="Arch" name="_launcharch"><br><br>
+				</form>
+			</div>
+			<button class="accordion">
+				<h3>Monitor</h3>
+			</button>
+			<div class="panel">
+				<form action="output" method="post">
+					{% csrf_token %}
+					<br><input class="button" type="submit" value="List Images" name="_lxcImageList"><br><br>
+					<input class="button" type="submit" value="List Containers" name="_lxclist"><br><br>
+					<input class="button" type="submit" value="List VMs" name="_vmlist"><br><br>
+				</form>
+			</div>
+			{% comment %} <button class="accordion">
+				<h3>Manage Backups</h3>
+			</button>
+			<div class="panel" style="text-align:left;">
+				<form action="output" method="post">      
+					{% csrf_token %}
+				<br>
+					<h3>Select a container</h3>
+					{{ htmlContainersFull | safe }}<br><br>
+					<input class="button" onclick="return confirm('You\'re about to stop a container, \nare you sure you wanna do that ?')" type="submit" value="Create Backup" name="_createbackup"><br> <br>
+			</div>
+			</form> {% endcomment %}
+		</div>
+		<div class="column2" >
+			<h2>{{ hostName }}'s system state</h2>
+			cpu usage {{ cpuPercent }} % 
+			<div id="cpuPercent">
+				<div id="cpuPercentBar"></div>
+			</div>
+			Memory Available: {{ memoryAvailable }}Go Used: {{ memoryUsed }}Go<br>
+			<div id="memoryPercent">
+				<div id="memoryPercentBar"></div>
+			</div>
+			<br> <br> 
+			{{ hostName }}'s Uptime:  {{ upTime }}
+			<br> <br> 
+			Number of containers : {{ numberContainers }}
+			<br><br>
+			Report date : {{ dateTime }}
+		</div>
+		{{data_external}}
+		{{data | safe}}
+		<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+			
+			for (i = 0; i < acc.length; i++) {
+			  acc[i].addEventListener("click", function() {
+			    this.classList.toggle("active");
+			    var panel = this.nextElementSibling;
+			    if (panel.style.display === "block") {
+			      panel.style.display = "none";
+			    } else {
+			      panel.style.display = "block";
+			    }
+			  });
+
+			}
+		</script>         
+	</body>
+</html>
+

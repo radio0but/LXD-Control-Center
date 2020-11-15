@@ -1,8 +1,10 @@
 # LXD Control Center
 
 It is yet another simple UI for LXD with Django and Subprocess.
-Easily manage your Linux containers from any devices. Note that you need to have LXD installed and initialized.
+Easily manage your Linux containers from any devices. Note that you need to have LXD installed and initialized. 
 
+![alt text](https://imgur.com/7zcIV74.png "Screenshot")
+By the way lydianna is the hostame of the computer it was runnin on.
 ### on many linux distro
 
 snap install lxd

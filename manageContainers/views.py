@@ -24,7 +24,7 @@ def button(request):
     ## Get HostName with Socket
     hostName = socket.gethostname()
     ## Get Uptime of the system from a bash script
-    upTime = subprocess.run(["bash", "/mnt/DATA/LXDcontrolCENTER/LXDcontrolCENTER/manageContainers/BASH/upTime.sh"],capture_output=True).stdout
+    upTime = subprocess.run(["bash", "manageContainers/BASH/upTime.sh"],capture_output=True).stdout
     ### Remove the trash
     upTime = str(upTime).replace("\\n", "").replace("b", "").replace("'", "")
     # Get "lxc list -c n" output and converting it to a python list
@@ -74,7 +74,7 @@ def output(request):
     ## Get HostName with Socket
     hostName = socket.gethostname()
     ## Get Uptime of the system from a bash script
-    upTime = subprocess.run(["bash", "/mnt/DATA/LXDcontrolCENTER/LXDcontrolCENTER/manageContainers/BASH/upTime.sh"],capture_output=True).stdout
+    upTime = subprocess.run(["bash", "manageContainers/BASH/upTime.sh"],capture_output=True).stdout
     ### Remove the trash
     upTime = str(upTime).replace("\\n", "").replace("b", "").replace("'", "")
     # Get "lxc list -c n" output and converting it to a python list

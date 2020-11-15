@@ -37,6 +37,8 @@ Then run the start script
 
 ## Almost Done
 
+to see the UI go to http://localhost:8383/
+
 Go to http://localhost:8383/admin to change your password 
 
 Default user name:

@@ -1,14 +1,19 @@
 # LXD Control Center
 
 It is yet another simple UI for LXD with Django and Subprocess.
-Easily manage your Linux containers from any devices. 
+Easily manage your Linux containers from any devices. Note that you need to have LXD installed and initialized.
 
+### on many linux distro
 
+snap install lxd
 
+lxd init
 
-## To install it 
+## To try it 
 
-simply execute the install script to install it in your /opt folder:
+Note that for now the script only work on Debian based os using aptitude. Will be fixed soon though for now you can modify the script to fit your package manager.
+
+simply execute the install script to install LXD-Control-Center in your /opt folder:
 
 make it excutable :
 

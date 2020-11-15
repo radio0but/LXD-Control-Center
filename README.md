@@ -1,13 +1,15 @@
 # LXD Control Center
 
 It is yet another simple UI for LXD with Django and Subprocess.
-Easily manage your Linux containers from any devices. Note that you need to have root acces and have LXD installed and initialized. 
+Easily manage your Linux containers from any devices. Note that you need to have root acces and have LXD installed and initialized. All the command bellow have to be run as root user. sudo wont suffice in this case
 
-use the command : *sudo su* to impersonate the root user
 
-![alt text](https://imgur.com/7zcIV74.png "Screenshot")
-By the way lydianna is the hostame of the computer it was runnin on.
+
+![alt text](https://imgur.com/7zcIV74.png "Screenshot By the way lydianna is the hostame of the computer it was runnin on.")
+
 ### on many linux distro to install and initialize lxd
+
+use the command : _sudo su_ to impersonate the root user
 
 snap install lxd
 

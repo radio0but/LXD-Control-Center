@@ -9,7 +9,7 @@ admin
 
 Default Password:
 
-lxdcontrolcenter
+lxccontrolcenter
 
 
 

@@ -10,4 +10,5 @@ source venv/bin/activate
 pip install psutil
 pip install django
 pip install requests
+pip install django-lockdown
 echo "SECRET_KEY = '$random'" >> ./LXDcontrolCENTER/settings.py

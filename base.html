@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+.container {
+
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-gap: 15px;
+}
+
+
+
+/* OTHER STYLES */
+
+hr {
+  border: 10px solid gray;
+  border-radius: 5px;
+}
+input[type=text] {
+    padding:3px; 
+    border:3px solid #aaa; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:2px 10px; 
+    background:#aaa; 
+    border:3 #888;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+iframe {
+    
+    height: 600px;
+    width: 100%;
+}
+
+button {
+    padding:2px 10px; 
+    background:#aaa; 
+    border:3 #888;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+body {
+    font-family: 'Roboto', sans-serif;
+  background-color: #000000;
+  height: 100vh;
+  display: flex;
+  color: red;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+    padding : 15px;
+  text-align: center;
+  background-color: #1EAAFC;
+  background-image: linear-gradient(130deg, #000000 0%, #5e5e5e 85%, #000000 100%);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  color: #fff;
+  border-radius: 4px;
+  border: 6px solid #5c5656;
+  width: max;
+}
+</style>
+<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="container">
+  <div class="item">
+{% block content %}
+{% endblock %}
+  </div>
+  </div>
+</body>
+</html>

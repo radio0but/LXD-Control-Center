@@ -9,7 +9,7 @@ snap install lxd
 
 lxd init
 
-## To try it 
+## To try LXD Control Center 
 
 Note that for now the script only work on Debian based os using aptitude. Will be fixed soon though for now you can modify the script to fit your package manager.
 

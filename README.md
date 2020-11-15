@@ -57,8 +57,8 @@ Go to http://localhost:8383/admin to change your password
 
 Default user name:
 
-admin
+**admin**
 
 Default Password:
 
-lxccontrolcenter
+**lxccontrolcenter**

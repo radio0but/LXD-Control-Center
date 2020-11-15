@@ -5,7 +5,7 @@ Easily manage your Linux containers from any devices. Note that you need to have
 
 ![alt text](https://imgur.com/7zcIV74.png "Screenshot")
 By the way lydianna is the hostame of the computer it was runnin on.
-### on many linux distro
+### on many linux distro to install and initialize lxd
 
 snap install lxd
 

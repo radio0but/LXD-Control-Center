@@ -21,7 +21,7 @@ https://linuxcontainers.org/lxd/getting-started-cli/
 
 ## To try LXD Control Center 
 
-Note that for now the script only work on Debian based os using aptitude. Will be fixed soon though for now you can modify the script to fit your package manager.
+Note that for now the script only work on Debian based os using aptitude. Will be fixed soon though for now you can modify the script to fit your package manager. i only use the package manager to instal git and Python3. The rest of the dependency get installed in a python virtual environement(venv). 
 
 simply execute the install script to install LXD-Control-Center in your /opt folder:
 
@@ -33,7 +33,11 @@ And execute it
 
 ./install.sh
 
+## To uninstall or Update
 
+simply delete the folder /opt/LXD-Control-Center
+
+then to update simply rerun the install script
 
 ## Then to start the server:
 

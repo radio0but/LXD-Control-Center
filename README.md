@@ -7,7 +7,7 @@ Easily manage your Linux containers from any devices. Note that you need to have
 
 ![alt text](https://imgur.com/7zcIV74.png "Screenshot By the way lydianna is the hostame of the computer it was runnin on.")
 
-### on many linux distro to install and initialize lxd
+### On many linux distro to install and initialize lxd
 
 use the command : _sudo su_ to impersonate the root user
 
@@ -15,7 +15,7 @@ snap install lxd
 
 lxd init
 
-learn more on LXD
+learn more on LXD with this good documentation !
 
 https://linuxcontainers.org/lxd/getting-started-cli/
 
@@ -33,7 +33,7 @@ And execute it
 
 __./install.sh__
 
-Its gonna ask you for a username and password
+Its gonna ask for a username and password
 
 ## To uninstall or Update
 

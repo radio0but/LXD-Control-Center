@@ -14,3 +14,6 @@ pip install django
 pip install requests
 pip install django-lockdown
 echo "SECRET_KEY = '$random'" >> ./LXDcontrolCENTER/settings.py
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py migrate

@@ -27,15 +27,19 @@ Execute the install script to install LXD-Control-Center in your /opt folder:
 
 Make it excutable :
 
-chmod +x ./install.sh
+__chmod +x ./install.sh__
 
 And execute it
 
-./install.sh
+__./install.sh__
+
+Its gonna ask you for a username and password
 
 ## To uninstall or Update
 
 delete the folder /opt/LXD-Control-Center
+
+__sudo rm -r  /opt/LXD-Control-Center/__
 
 then to update simply rerun the install script
 
@@ -47,18 +51,12 @@ First you have to make the *start.sh* script executable
 
 Then run the start script
 
-/opt/LXD-Control-Center/start.sh 
+__/opt/LXD-Control-Center/start.sh__ 
 
 ## Almost Done
 
 to see the UI go to http://localhost:8082/
 
-Go to http://localhost:8082/admin to change your password 
+Go to http://localhost:8082/admin to change your password and add users. Users need to have staff permission to access LXD-COntrol-Center
 
-Default user name:
 
-**admin**
-
-Default Password:
-
-**lxccontrolcenter**

@@ -43,7 +43,7 @@ then to update simply rerun the install script
 
 First you have to make the *start.sh* script executable
 
-*chmod +x /opt/LXD-Control-Center/start.sh*
+**chmod +x /opt/LXD-Control-Center/start.sh**
 
 Then run the start script
 
@@ -51,9 +51,9 @@ Then run the start script
 
 ## Almost Done
 
-to see the UI go to http://localhost:8383/
+to see the UI go to http://localhost:8082/
 
-Go to http://localhost:8383/admin to change your password 
+Go to http://localhost:8082/admin to change your password 
 
 Default user name:
 

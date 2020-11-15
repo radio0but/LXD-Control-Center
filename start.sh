@@ -1,4 +1,4 @@
 #!/bin/bash
 cd /opt/LXD-Control-Center
 source venv/bin/activate
-python manage.py runserver 0.0.0.0:8383
+python manage.py runserver 0.0.0.0:8082

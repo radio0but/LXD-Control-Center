@@ -6,7 +6,7 @@ Easily manage your Linux containers from any devices.
 
 
 
-##To install it 
+## To install it 
 
 simply execute the install script to install it in your /opt folder:
 
@@ -20,7 +20,7 @@ And execute it
 
 
 
-##Then to start the server:
+## Then to start the server:
 
 First you have to make the *start.sh* script executable
 

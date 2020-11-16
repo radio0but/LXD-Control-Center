@@ -21,7 +21,7 @@ https://linuxcontainers.org/lxd/getting-started-cli/
 
 ## To try LXD Control Center 
 
-Note that for now the script only work on Debian based os using aptitude. Will be fixed soon though for now you can modify the script to fit your package manager. i only use the package manager to instal git and Python3. The rest of the dependency get installed in a python virtual environement(venv). 
+Note that for now the script only work on Debian based os using aptitude. Will be fixed soon though for now you can modify the script to fit your package manager. i only use the package manager to install git and Python3. The rest of the dependency get installed in a python virtual environement(venv). 
 
 download the script :
 
@@ -62,6 +62,6 @@ __/opt/LXD-Control-Center/start.sh__
 
 to see the UI go to http://localhost:8082/
 
-Go to http://localhost:8082/admin to change your password and add users. Users need to have staff permission to access LXD-COntrol-Center
+Go to http://localhost:8082/admin to change your password and add users. Users need to have staff permission to access LXD-Control-Center
 
 

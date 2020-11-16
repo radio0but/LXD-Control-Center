@@ -78,7 +78,7 @@ Go to http://localhost:8082/admin to change your password and add users. Users n
 
 If you want the app to be visible on the network add your IP or 0.0.0.0 to /opt/LXD-Control-Center
 
-nano /opt/LXD-Control-Center/LXDcontrolCENTER/settings.py
+__nano /opt/LXD-Control-Center/LXDcontrolCENTER/settings.py__
 
 change
 __ALLOWED_HOSTS = ["localhost"]__

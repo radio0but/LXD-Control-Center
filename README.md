@@ -34,7 +34,7 @@ _yum install python3 git wget_
 
 _pacman -S python3 git wget_
 
-### download the script :
+### download the install script :
 
 _wget https://github.com/radio0but/LXD-Control-Center/releases/download/Version-1/install.sh_
 

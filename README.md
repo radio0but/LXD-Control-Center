@@ -49,7 +49,9 @@ And execute it
 
 __./install.sh__
 
-Its gonna ask for a username and password
+Its gonna ask for an username, an e-mail adress and a password
+
+(You can leave the e-mail adress blank)
 
 ## To uninstall or Update
 

@@ -28,6 +28,8 @@ pip install psutil
 pip install django
 pip install requests
 pip install django-lockdown
+rem venv/lib64/python3.8/site-packages/lockdown/templates/lockdown/base.html
+rem venv/lib64/python3.8/site-packages/lockdown/templates/lockdown/form.html
 mv base.html venv/lib64/python3.8/site-packages/lockdown/templates/lockdown/
 mv form.html venv/lib64/python3.8/site-packages/lockdown/templates/lockdown/
 echo "SECRET_KEY = '$random'" >> ./LXDcontrolCENTER/settings.py

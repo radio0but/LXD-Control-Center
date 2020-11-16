@@ -76,4 +76,13 @@ to see the UI go to http://localhost:8082/
 
 Go to http://localhost:8082/admin to change your password and add users. Users need to have staff permission to access LXD-Control-Center
 
+If you want the app to be visible on the network add your IP or 0.0.0.0 to /opt/LXD-Control-Center
 
+nano /opt/LXD-Control-Center/LXDcontrolCENTER/settings.py
+
+change
+__ALLOWED_HOSTS = ["localhost"]__
+
+To something like this
+
+__ALLOWED_HOSTS = ["localhost","Yo.ur.Lo.cal.Ip","exemple.com"]__

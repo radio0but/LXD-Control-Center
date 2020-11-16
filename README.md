@@ -24,30 +24,30 @@ https://linuxcontainers.org/lxd/getting-started-cli/
 
 #### Debian based OS :
 
-__apt install python3 git wget__
+_apt install python3 git wget_
 
 #### Redhat based OS :
 
-__yum install python3 git wget__
+_yum install python3 git wget_
 
 #### Arch based OS :
 
-__pacman -S python3 git wget__
+_pacman -S python3 git wget_
 
 ### download the script :
 
-__wget https://github.com/radio0but/LXD-Control-Center/releases/download/Version-1/install.sh__
+_wget https://github.com/radio0but/LXD-Control-Center/releases/download/Version-1/install.sh_
 
 
 Execute the install script to install LXD-Control-Center in your /opt folder:
 
 ### Make it excutable :
 
-__chmod +x ./install.sh__
+_chmod +x ./install.sh_
 
 ### And execute it
 
-__./install.sh__
+_./install.sh_
 
 Its gonna ask for an username, an e-mail adress and a password
 

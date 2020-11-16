@@ -22,30 +22,30 @@ https://linuxcontainers.org/lxd/getting-started-cli/
 
 ### install dependency :
 
-Debian based OS :
+#### Debian based OS :
 
 __apt install python3 git wget__
 
-Redhat based OS :
+#### Redhat based OS :
 
 __yum install python3 git wget__
 
-Arch based OS :
+#### Arch based OS :
 
 __pacman -S python3 git wget__
 
-download the script :
+### download the script :
 
 __wget https://github.com/radio0but/LXD-Control-Center/releases/download/Version-1/install.sh__
 
 
 Execute the install script to install LXD-Control-Center in your /opt folder:
 
-Make it excutable :
+### Make it excutable :
 
 __chmod +x ./install.sh__
 
-And execute it
+### And execute it
 
 __./install.sh__
 

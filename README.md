@@ -23,6 +23,11 @@ https://linuxcontainers.org/lxd/getting-started-cli/
 
 Note that for now the script only work on Debian based os using aptitude. Will be fixed soon though for now you can modify the script to fit your package manager. i only use the package manager to instal git and Python3. The rest of the dependency get installed in a python virtual environement(venv). 
 
+download the script :
+
+__wget https://github.com/radio0but/LXD-Control-Center/releases/download/Version-1/install.sh__
+
+
 Execute the install script to install LXD-Control-Center in your /opt folder:
 
 Make it excutable :

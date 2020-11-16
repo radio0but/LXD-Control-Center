@@ -57,7 +57,7 @@ Its gonna ask for an username, an e-mail adress and a password
 
 delete the folder /opt/LXD-Control-Center
 
-__rm -r  /opt/LXD-Control-Center/__
+_rm -r  /opt/LXD-Control-Center/_
 
 then to update simply rerun the install script
 
@@ -65,11 +65,11 @@ then to update simply rerun the install script
 
 First you have to make the *start.sh* script executable
 
-**chmod +x /opt/LXD-Control-Center/start.sh**
+*chmod +x /opt/LXD-Control-Center/start.sh*
 
 Then run the start script
 
-__/opt/LXD-Control-Center/start.sh__ 
+_/opt/LXD-Control-Center/start.sh_ 
 
 ## Almost Done
 
@@ -81,7 +81,7 @@ Go to http://localhost:8082/admin to change your password and add users. Users n
 
 If you want the app to be visible on the network add your IP or 0.0.0.0 to /opt/LXD-Control-Center/settings.py 
 
-__nano /opt/LXD-Control-Center/LXDcontrolCENTER/settings.py__
+_nano /opt/LXD-Control-Center/LXDcontrolCENTER/settings.py_
 
 change
 __ALLOWED_HOSTS = ["localhost"]__

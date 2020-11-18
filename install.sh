@@ -31,7 +31,7 @@
 ###                                                                              ###
 ###                                                                              ###
 ####################################################################################
-####################################################################################
+##                                                                                ##
 ## change directory to /opt                                                       ##
 cd /opt                                                                           ##
 ## Clone the files from github                                                    ##
@@ -47,7 +47,8 @@ source venv/bin/activate                                                        
 ## Install Dependensies                                                           ##
 pip install psutil                                                                ##
 pip install django                                                                ##
-pip install requests                                                              ##
+pip install requests
+pip install webssh                                                              ##
 pip install django-lockdown                                                       ##
 ## Remove the default templates for Django Lockdown                               ##
 rm venv/lib64/python3.8/site-packages/lockdown/templates/lockdown/base.html       ##
@@ -61,4 +62,5 @@ echo "SECRET_KEY = '$random'" >> ./LXDcontrolCENTER/settings.py                 
 python manage.py migrate                                                          ##
 ## Create root User for Lxd Control Center                                        ##            
 python manage.py createsuperuser                                                  ##
+##                                                                                ##
 ####################################################################################

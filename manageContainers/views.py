@@ -144,6 +144,12 @@ def output(request):
             else:
                 out= "Oh no, i dont know what to delete... <br> Maybe you want me to delete everything ? <br>...<br> Not a good idea i shall wait for you to select a container in the list and try again"
                 out = "<div class=\"footer\"><button class=\"accordion\"><h2>Need Name</h2></button><div class=\"panel\">" + str(out) + "</div></div>"
+        elif '_terminal' in request.POST:
+            if containerName != "":
+                out = "<div class=\"footer\"><button class=\"accordion\"><h2>" + containerName + " Terminal</h2></button><div class=\"panel\">use localhost as hostname and you local username and password to login this will execute bash on " + containerName + " <a href=\"http://localhost:8989/?command=sudo lxc exec " + containerName + " bash\" target=\"_blank\"><h2>Open webssh</h2></a></div></div>"
+            else:
+                out= "Ok i ment opening the terminal inside a container ... <br> Here is a link to a simple ssh terminal   <br>...<br>use localhost as hostname and you local username and password to login<br> once your connected use the command \"sudo lxc exec nameofcontainer bash\"   <a href=\"http://localhost:8989\"><h2>webssh link</h2></a> <br> Or select a container and clic the button again"
+                out = "<div class=\"footer\"><button class=\"accordion\"><h2>Need Name</h2></button><div class=\"panel\">" + str(out) + "</div></div>"    
 #### Launch Containers
 
         elif '_launchubuntu' in request.POST:
@@ -180,12 +186,7 @@ def output(request):
             out = "<div class=\"item\">" +  str(subprocess.run(["lxc","list","--format","csv"], capture_output=True).stdout).replace(",0","</div><div class=\"item\">").replace("STOPPED","<div style=\"color: red;\" >STOPPED</div>").replace("RUNNING","<div style=\"color: green;\" >RUNNING</div>").replace("\\n","").replace(",","<br>").replace("<br><br>","<br>").replace("b\\","").replace("\'","")[1::] + "</div>"
             out = "<div class=\"footer\"><button class=\"accordion\"><h2>Containers List</h2></button><div class=\"panel\">" + out + "</div></div>"
         elif '_vmlist' in request.POST:
-            rawdata = subprocess.run(["virsh", "list"], capture_output=True)
-            freshdata = str(rawdata.stdout)
-            remove = freshdata.replace("\\n","<br>")
-            remove1 = remove.replace("b'","")
-            out = remove1.replace("\'","")
-            out = "<div class=\"footer\"><button class=\"accordion\"><h2>Virtual Machines List</h2></button><div class=\"panel\">" + out + "</div></div>"
+            out = "<div class=\"footer\"><button class=\"accordion\"><h2>Virtual Machines List</h2></button><div class=\"panel\"><iframe src=\"http://localhost:8989\"\></div></div>"
     print(out)
 
     return render(

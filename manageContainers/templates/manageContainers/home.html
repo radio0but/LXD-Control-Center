@@ -26,7 +26,7 @@
 	</head>
 	<body>
 		<div class="header">
-			<a href="https://lxc.lebelou.ga">
+			<a href="/">
 				<img width=180px height=180px style="  " src="https://upload.wikimedia.org/wikipedia/commons/4/40/Linux_Containers_logo.png">
 				</img>
 				<h1>{{hostName}}'s LXD Control Center</h1>
@@ -48,6 +48,7 @@
 					<input class="button" onclick="return confirm('You\'re about to start a container, \nare you sure you wanna do that ?')" type="submit" value="Start" name="_start"><br><br>
 					<input class="button" onclick="return confirm('You\'re about to restart a container, \nare you sure you wanna do that ?')"type="submit" value="Restart" name="_restart"><br><br>
 					<input class="button" onclick="return confirm('You\'re about to delete a container, \nare you sure you wanna do that ?')"type="submit" value="Delete" name="_delete"><br><br>
+					<input class="button" type="submit" value="Open in terminal" name="_terminal"><br><br>
 			</div>
 			</form>
 			<button class="accordion">
@@ -109,6 +110,7 @@
 			<br><br>
 			Report date : {{ dateTime }}
 		</div>
+		{% csrf_token %}
 		{{data_external}}
 		{{data | safe}}
 		<script>

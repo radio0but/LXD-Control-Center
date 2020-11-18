@@ -1,7 +1,7 @@
 #!/bin/bash
 ####################################################################################
 ###                                                                              ###
-###                    Launcher for LXD-Control-Center                           ###
+###                Services Stopper  for LXD-Control-Center                      ###
 ###              LXD-Control-Center A simple web UI for LXD                      ###            
 ###                Copyright (C) 2020  Marc-André Legault                        ###              
 ###                                                                              ###   
@@ -33,15 +33,15 @@
 ####################################################################################
 ####################################################################################
 ##                                                                                ##
-## Make sure to be in the right folder when executing manage.py                   ##
+## Make sure to be in the right folder for the apps pid files                     ##
 cd /opt/LXD-Control-Center                                                        ##
-## Activate the python virtual environement                                       ##      
-source venv/bin/activate                                                          ##  
-## Start LXDCC on port 8082  0.0.0.0 means visible from any interface             ##
-nohup python manage.py runserver 0.0.0.0:8082 > runserver.log 2>&1 &              ##
-echo $! > runserver_pid.txt
-## Start Webssh on port 8989                                                      ##
-nohup wssh --port=8989 > webssh.log 2>&1 &                                        ##
-echo $! > webssh_pid.txt
+## Kill LXDCC                                                                     ##
+kill -9 `cat runserver_pid.txt`                                                   ##
+## Remove LXDCC pid file                                                          ##         
+rm runserver_pid.txt                                                              ##
+## Kill webssh                                                                    ##
+kill -9 `cat webssh_pid.txt`                                                      ##
+## Remove webssh pid file                                                         ##
+rm webssh_pid.txt                                                                 ##
 ##                                                                                ##
-####################################################################################  
+####################################################################################

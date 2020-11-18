@@ -27,7 +27,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["localhost"]
 
 LOCKDOWN_FORM = 'lockdown.forms.AuthForm'
-#SECRET_KEY = 'ZZq0*gTXbWv+OF:UJjEPEz>-6!.bbDFhm%W[41)c<s:vJeuKx9'
+SECRET_KEY = 'ZZq0*gTXbWv+OF:UJjEPEz>-6!.bbDFhm%W[41)c<s:vJeuKx9'
 
 # Application definition
 

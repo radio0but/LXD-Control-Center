@@ -82,3 +82,12 @@
 [I 201117 23:44:47 web:2239] 200 POST /?command=sudo%20lxc%20exec%20belougacloud%20bash (::1) 513.63ms
 [I 201117 23:44:47 web:2239] 101 GET /ws?id=140619780701584 (::1) 0.35ms
 [I 201117 23:44:47 handler:533] Connected from ::1:59582
+[I 201118 00:38:27 web:2239] 200 GET / (::1) 0.78ms
+[I 201118 00:41:52 web:2239] 200 GET /?command=sudo%20lxc%20exec%20multiartcreation%20bash (::1) 1.06ms
+[I 201118 00:41:59 handler:447] Connecting to localhost:22
+[I 201118 00:41:59 transport:1819] Connected (version 2.0, client OpenSSH_8.2p1)
+[I 201118 00:41:59 handler:87] Trying password authentication
+[I 201118 00:41:59 transport:1819] Authentication (password) successful!
+[I 201118 00:42:00 web:2239] 200 POST /?command=sudo%20lxc%20exec%20multiartcreation%20bash (::1) 462.41ms
+[I 201118 00:42:00 web:2239] 101 GET /ws?id=140619780124240 (::1) 0.53ms
+[I 201118 00:42:00 handler:533] Connected from ::1:35884

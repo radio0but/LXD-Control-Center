@@ -106,5 +106,5 @@ To something like this
 
 __ALLOWED_HOSTS = ["localhost","Yo.ur.Lo.cal.Ip","exemple.com"]__
 
-Then you can use one of your containers as a reverse proxy. If you make webssh visible on the web make sure you have good passwords on your system... make sure you have good passwors period !  If you put webssh behind a reverse proxy change the variable wsshAdress in /opt/LXD-Control-Center/manage-containers/views.py __from__ _wsshAdress = "http://localhost:8989"_ __to__ wsshAdress = "https://ssh.yourdomain.com" 
+Then you can use one of your containers as a reverse proxy. If you make webssh visible on the web make sure you have good passwords on your system... make sure you have good passwors period !  If you put webssh behind a reverse proxy change the variable wsshAdress in /opt/LXD-Control-Center/manage-containers/views.py __from__ _wsshAdress = "http://localhost:8989"_ __to__ wsshAdress = "https://ssh.yourdomain.com" . When using webssh  behind a reverse proxy you gonna have access to the machine its running om with the hostname "localhost".
  

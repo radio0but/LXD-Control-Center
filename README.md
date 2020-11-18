@@ -65,7 +65,7 @@ _rm -r  /opt/LXD-Control-Center/_
 
 then to update simply rerun the install script
 
-## To start the server:
+## To start LXDCC:
 
 First you have to make the *start.sh* script executable
 
@@ -74,6 +74,18 @@ First you have to make the *start.sh* script executable
 Then run the start script
 
 _/opt/LXD-Control-Center/start.sh_ 
+
+The script will execute webssh and LXDCC in background
+
+## To stop LXDCC:
+
+First you have to make the *stop.sh* script executable
+
+*chmod +x /opt/LXD-Control-Center/stop.sh*
+
+Then run the stop script
+
+_/opt/LXD-Control-Center/stop.sh_ 
 
 ## Almost Done
 
@@ -94,4 +106,5 @@ To something like this
 
 __ALLOWED_HOSTS = ["localhost","Yo.ur.Lo.cal.Ip","exemple.com"]__
 
-Then you can use one of your containers as a reverse proxy. If you make webssh visible on the web make sure you have good passwords on your system... make sure you have good passwors period !  
+Then you can use one of your containers as a reverse proxy. If you make webssh visible on the web make sure you have good passwords on your system... make sure you have good passwors period !  If you put webssh behind a reverse proxy change the variable wsshAdress in /opt/LXD-Control-Center/manage-containers/views.py __from__ _wsshAdress = "http://localhost:8989"_ __to__ wsshAdress = "https://ssh.yourdomain.com" 
+ 

@@ -1,7 +1,9 @@
 # LXD Control Center
 
-It is yet another simple UI for LXD with Django and Subprocess.
-Easily manage your Linux containers from any devices. Note that you need to have root acces and have LXD installed and initialized. All the command bellow have to be run as root user. Use the command : _sudo su_ to impersonate the root user if you are using sudo on your system.
+It is yet another simple UI for LXD with Django and Subprocess. I also used webssh from Shengdun Hua as terminal for the app.
+LXDCC allow you to manage your LXD containers all in a web interface. You can Start, Stop, Restart and delete container. For now you can launch Ubuntu20 CentOS6 and Arch(latest). Thanks to webssh its now possible to open containers in the terminal !
+
+Note that you need to have root acces and have LXD installed and initialized. You need a ssh server to use the webssh feature. All the command bellow have to be run as root user. Use the command : _sudo su_ to impersonate the root user if you are using sudo on your system.
 
 
 

@@ -29,7 +29,9 @@ https://linuxcontainers.org/lxd/getting-started-cli/
 
 #### Debian based OS :
 
-***apt install python3 git wget***
+***
+apt install python3 git wget
+***
 
 #### Redhat based OS :
 

@@ -35,27 +35,31 @@ apt install python3 git wget
 
 #### Redhat based OS :
 
+***
 _yum install python3 git wget_
+***
 
 #### Arch based OS :
-
+***
 _pacman -S python3 git wget_
+***
 
 ### download the install script :
 
+***
 _wget https://github.com/radio0but/LXD-Control-Center/releases/download/Version-1/install.sh_
-
+***
 
 Execute the install script to install LXD-Control-Center in your /opt folder:
 
 ### Make it excutable :
-
-_chmod +x ./install.sh_
-
+***
+chmod +x ./install.sh
+***
 ### And execute it
-
-_./install.sh_
-
+***
+./install.sh
+***
 Its gonna ask for an username, an e-mail adress and a password
 
 (You can leave the e-mail adress blank)
@@ -63,33 +67,33 @@ Its gonna ask for an username, an e-mail adress and a password
 ## To uninstall or Update
 
 delete the folder /opt/LXD-Control-Center
-
+***
 _rm -r  /opt/LXD-Control-Center/_
-
+***
 then to update simply rerun the install script
 
 ## To start LXDCC:
 
 First you have to make the *start.sh* script executable
-
-*chmod +x /opt/LXD-Control-Center/start.sh*
-
+***
+chmod +x /opt/LXD-Control-Center/start.sh
+***
 Then run the start script
-
+***
 _/opt/LXD-Control-Center/start.sh_ 
-
+***
 The script will execute webssh and LXDCC in background
 
 ## To stop LXDCC:
 
 First you have to make the *stop.sh* script executable
-
-*chmod +x /opt/LXD-Control-Center/stop.sh*
-
+***
+chmod +x /opt/LXD-Control-Center/stop.sh
+***
 Then run the stop script
-
-_/opt/LXD-Control-Center/stop.sh_ 
-
+***
+/opt/LXD-Control-Center/stop.sh
+***
 ## Almost Done
 
 to see the UI go to http://localhost:8082/
@@ -99,15 +103,16 @@ Go to http://localhost:8082/admin to change your password and add users. Users n
 ## Optional Settings
 
 If you want the app to be visible on the network add your IP or 0.0.0.0 to /opt/LXD-Control-Center/settings.py 
-
+***
 _nano /opt/LXD-Control-Center/LXDcontrolCENTER/settings.py_
-
+***
 change
-__ALLOWED_HOSTS = ["localhost"]__
-
+***
+ALLOWED_HOSTS = ["localhost"]
+***
 To something like this
-
-__ALLOWED_HOSTS = ["localhost","Yo.ur.Lo.cal.Ip","exemple.com"]__
-
+***
+ALLOWED_HOSTS = ["localhost","Yo.ur.Lo.cal.Ip","exemple.com"]
+***
 If you make webssh visible on the web make sure you have good passwords. Youre gonna be able to work on your machine from anywhere by using localhost as hostname when connecting to webssh If you access webssh behind a reverse proxy change the variable wsshAdress in /opt/LXD-Control-Center/manage-containers/views.py __from__ _wsshAdress = "http://localhost:8989"_ __to__ wsshAdress = "https://ssh.yourdomain.com" __or__ wsshAdress = "http://yo.url.ocal.ip:8989"   for the terminal command to work properly. access to the machine its running om with the hostname "localhost".
  

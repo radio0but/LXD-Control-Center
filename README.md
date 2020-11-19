@@ -1,13 +1,14 @@
 # LXD Control Center
 
 It is yet another simple UI for LXD with Django, Subprocess and webssh.
-LXDCC allow you to manage your LXD containers all in a web interface. You can Start, Stop, Restart and delete container. For now you can launch Ubuntu20 CentOS6 and Arch(latest). Thanks to webssh its now possible to open containers in the terminal !
+LXDCC allow you to manage your LXD containers all in a web interface. You can Start, Stop, Restart and delete container. For now you can only launch Ubuntu20 CentOS6 and Arch(latest) containers, i plan on parsing the image repository to allow installing any linux os. Thanks to webssh its now possible to open containers in the terminal ! Its easy to install the project with the install script and there is also a start and a stop script to easily launch webssh and LXDCC in the background. 
 
 I do this project mainly to learn and also make something useful for my other projects. 
 
 Note that you need to have root acces and have LXD installed and initialized. You need a ssh server to use the webssh feature. All the command bellow have to be run as root user. Use the command : _sudo su_ to impersonate the root user if you are using sudo on your system.
 
-
+Link to the webssh project:
+https://github.com/huashengdun/webssh
 
 ![alt text](https://imgur.com/7zcIV74.png "Screenshot By the way lydianna is the hostame of the computer it was runnin on.")
 
@@ -28,7 +29,7 @@ https://linuxcontainers.org/lxd/getting-started-cli/
 
 #### Debian based OS :
 
-_apt install python3 git wget_
+***apt install python3 git wget***
 
 #### Redhat based OS :
 
@@ -106,5 +107,5 @@ To something like this
 
 __ALLOWED_HOSTS = ["localhost","Yo.ur.Lo.cal.Ip","exemple.com"]__
 
-Then you can use one of your containers as a reverse proxy. If you make webssh visible on the web make sure you have good passwords on your system... make sure you have good passwors period !  If you put webssh behind a reverse proxy change the variable wsshAdress in /opt/LXD-Control-Center/manage-containers/views.py __from__ _wsshAdress = "http://localhost:8989"_ __to__ wsshAdress = "https://ssh.yourdomain.com" . When using webssh  behind a reverse proxy you gonna have access to the machine its running om with the hostname "localhost".
+If you make webssh visible on the web make sure you have good passwords. Youre gonna be able to work on your machine from anywhere by using localhost as hostname when connecting to webssh If you access webssh behind a reverse proxy change the variable wsshAdress in /opt/LXD-Control-Center/manage-containers/views.py __from__ _wsshAdress = "http://localhost:8989"_ __to__ wsshAdress = "https://ssh.yourdomain.com" __or__ wsshAdress = "http://yo.url.ocal.ip:8989"   for the terminal command to work properly. access to the machine its running om with the hostname "localhost".
  

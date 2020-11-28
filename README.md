@@ -1,7 +1,7 @@
 # LXD Control Center
 
-It is yet another simple UI for LXD with Django, Subprocess and webssh.
-LXDCC allow you to manage your LXD containers all in a web interface. You can Start, Stop, Restart and delete container. For now you can only launch Ubuntu20 CentOS6 and Arch(latest) containers, i plan on parsing the image repository to allow installing any linux os. Thanks to webssh its now possible to open containers in the terminal ! Its easy to install the project with the install script and there is also a start and a stop script to easily launch webssh and LXDCC in the background. 
+LXDCC is yet another simple UI for LXD with Django, Subprocess and webssh. 
+LXDCC allow you to manage your LXD containers in a simple responsive web interface. This webapp make use of bash and python to automate the most common task you would do on the terminal with lxc command like Starting, Stoping, Restarting and deleting containers. For now you can also launch Ubuntu20 CentOS6 and Arch(latest) containers, i plan on parsing the image repository to allow installing from the LXD Images repositories. Thanks to webssh its now possible to open containers in the terminal ! Its easy to install the project with the install script and there is also a start and a stop script to easily launch webssh and LXDCC in the background. 
 
 I do this project mainly to learn and also make something useful for my other projects. 
 

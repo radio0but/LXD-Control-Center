@@ -176,7 +176,7 @@ def output(request):
                 str2 = " Terminal</h2></button><div class=\"panel\">This will open the terminal in a new tab and execute bash on " + containerName
                 str3 = " <a href=\"" + wsshAdress + "/?username=" + str(userName) + "&password=" + str(base64_password)
                 str4 = "&hostname=localhost&command=sudo lxc exec " + containerName
-                str5 = " bash\" target=\"_blank\"><h2>Open webssh</h2></a></div></div> <div id=\"terminal\"></div>"
+                str5 = " bash\" target=\"_blank\"><h2>Open webssh</h2></a></div></div> <div id=\"terminal\"></div>" 
                 out = str1 + str2 + str3 + str4 + str5
                 ## ttyd
                 # unampsswd = userName + ":" + password

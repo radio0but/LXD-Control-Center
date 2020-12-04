@@ -178,6 +178,16 @@ input[type=text] {
     
 }
 
+input[type=password] {
+  padding:1px;
+  font-size: 1em;
+  border:1px solid #aaa; 
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%
+  
+}
+
 input[type=text]:focus {
     border-color:#333;
 }

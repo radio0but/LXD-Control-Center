@@ -91,3 +91,240 @@
 [I 201118 00:42:00 web:2239] 200 POST /?command=sudo%20lxc%20exec%20multiartcreation%20bash (::1) 462.41ms
 [I 201118 00:42:00 web:2239] 101 GET /ws?id=140619780124240 (::1) 0.53ms
 [I 201118 00:42:00 handler:533] Connected from ::1:35884
+[I 201118 21:02:01 web:2239] 304 GET /static/img/favicon.png (::1) 0.89ms
+[I 201118 21:02:33 web:2239] 200 GET /static/img/favicon.png (::1) 1.47ms
+[I 201118 21:02:36 web:2239] 200 GET /static/img/favicon.png (::1) 0.74ms
+[I 201118 22:05:42 web:2239] 200 GET /?hostname=localhost&username=uldarik&password=dbmE1cML (::1) 1.31ms
+[I 201118 22:05:42 handler:579] Disconnected from ::1:35884
+[I 201118 22:05:42 worker:114] Closing worker 140619780124240 with reason: client disconnected
+[I 201118 22:05:42 worker:122] Connection to localhost:22 lost
+[I 201118 22:05:42 web:2239] 304 GET /static/css/bootstrap.min.css (::1) 0.87ms
+[I 201118 22:05:42 web:2239] 304 GET /static/css/xterm.min.css (::1) 1.10ms
+[I 201118 22:05:42 web:2239] 304 GET /static/css/fullscreen.min.css (::1) 1.21ms
+[I 201118 22:05:42 web:2239] 304 GET /static/js/jquery.min.js (::1) 1.48ms
+[I 201118 22:05:42 web:2239] 304 GET /static/js/popper.min.js (::1) 2.09ms
+[I 201118 22:05:42 web:2239] 304 GET /static/js/bootstrap.min.js (::1) 2.60ms
+[I 201118 22:05:42 web:2239] 304 GET /static/js/xterm.min.js (::1) 1.04ms
+[I 201118 22:05:42 web:2239] 304 GET /static/js/xterm-addon-fit.min.js (::1) 1.12ms
+[I 201118 22:05:42 web:2239] 304 GET /static/js/main.js (::1) 1.43ms
+[I 201118 22:05:42 handler:447] Connecting to localhost:22
+[I 201118 22:05:42 transport:1819] Connected (version 2.0, client OpenSSH_8.2p1)
+[I 201118 22:05:42 handler:87] Trying password authentication
+[I 201118 22:05:46 transport:1819] Authentication (password) failed.
+[E 201118 22:05:46 handler:511] Traceback (most recent call last):
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 450, in ssh_connect
+        ssh.connect(*args, timeout=options.timeout)
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/paramiko/client.py", line 435, in connect
+        self._auth(
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 101, in _auth
+        raise saved_exception
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 89, in _auth
+        self._transport.auth_password(username, password)
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/paramiko/transport.py", line 1509, in auth_password
+        return self.auth_handler.wait_for_response(my_event)
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+        raise e
+    paramiko.ssh_exception.AuthenticationException: Authentication failed.
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 509, in post
+        worker = yield future
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/tornado/gen.py", line 762, in run
+        value = future.result()
+      File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+        return self.__get_result()
+      File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+        raise self._exception
+      File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+        result = self.fn(*self.args, **self.kwargs)
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 456, in ssh_connect
+        raise ValueError('Authentication failed.')
+    ValueError: Authentication failed.
+    
+[I 201118 22:05:46 web:2239] 200 POST /?hostname=localhost&username=uldarik&password=dbmE1cML (::1) 3456.24ms
+[I 201118 22:05:59 web:2239] 200 GET /?hostname=localhost&username=uldarik (::1) 0.79ms
+[I 201118 22:05:59 handler:447] Connecting to localhost:22
+[I 201118 22:05:59 transport:1819] Connected (version 2.0, client OpenSSH_8.2p1)
+[I 201118 22:05:59 handler:87] Trying password authentication
+[I 201118 22:05:59 transport:1819] Authentication (password) failed.
+[E 201118 22:05:59 handler:511] Traceback (most recent call last):
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 450, in ssh_connect
+        ssh.connect(*args, timeout=options.timeout)
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/paramiko/client.py", line 435, in connect
+        self._auth(
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 101, in _auth
+        raise saved_exception
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 89, in _auth
+        self._transport.auth_password(username, password)
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/paramiko/transport.py", line 1509, in auth_password
+        return self.auth_handler.wait_for_response(my_event)
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/paramiko/auth_handler.py", line 250, in wait_for_response
+        raise e
+    paramiko.ssh_exception.AuthenticationException: Authentication failed.
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 509, in post
+        worker = yield future
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/tornado/gen.py", line 762, in run
+        value = future.result()
+      File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+        return self.__get_result()
+      File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+        raise self._exception
+      File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+        result = self.fn(*self.args, **self.kwargs)
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 456, in ssh_connect
+        raise ValueError('Authentication failed.')
+    ValueError: Authentication failed.
+    
+[I 201118 22:05:59 web:2239] 200 POST /?hostname=localhost&username=uldarik (::1) 22.80ms
+[I 201118 22:06:12 web:2239] 200 GET /?hostname=ubuntu&username=uldarik (::1) 1.19ms
+[I 201118 22:06:12 handler:447] Connecting to ubuntu:22
+[E 201118 22:06:12 handler:511] Traceback (most recent call last):
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 450, in ssh_connect
+        ssh.connect(*args, timeout=options.timeout)
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/paramiko/client.py", line 340, in connect
+        to_try = list(self._families_and_addresses(hostname, port))
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/paramiko/client.py", line 203, in _families_and_addresses
+        addrinfos = socket.getaddrinfo(
+      File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+        for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+    socket.gaierror: [Errno -2] Name or service not known
+    
+    During handling of the above exception, another exception occurred:
+    
+    Traceback (most recent call last):
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 509, in post
+        worker = yield future
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/tornado/gen.py", line 762, in run
+        value = future.result()
+      File "/usr/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+        return self.__get_result()
+      File "/usr/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+        raise self._exception
+      File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+        result = self.fn(*self.args, **self.kwargs)
+      File "/mnt/DATA/LXDcontrolCENTER/lib/python3.8/site-packages/webssh/handler.py", line 452, in ssh_connect
+        raise ValueError('Unable to connect to {}:{}'.format(*dst_addr))
+    ValueError: Unable to connect to ubuntu:22
+    
+[I 201118 22:06:12 web:2239] 200 POST /?hostname=ubuntu&username=uldarik (::1) 3.32ms
+[I 201118 22:07:04 web:2239] 200 GET /?hostname=localhost&username=uldarik&password=%22dbmE1cML%22 (::1) 1.52ms
+[I 201118 22:08:11 web:2239] 200 GET /?hostname=localhost&username=uldarik&password=ZGJtRTFjTUw= (::1) 1.03ms
+[I 201118 22:08:11 handler:447] Connecting to localhost:22
+[I 201118 22:08:11 transport:1819] Connected (version 2.0, client OpenSSH_8.2p1)
+[I 201118 22:08:11 handler:87] Trying password authentication
+[I 201118 22:08:11 transport:1819] Authentication (password) successful!
+[I 201118 22:08:11 web:2239] 200 POST /?hostname=localhost&username=uldarik&password=ZGJtRTFjTUw= (::1) 573.67ms
+[I 201118 22:08:11 web:2239] 101 GET /ws?id=140619737513216 (::1) 0.33ms
+[I 201118 22:08:11 handler:533] Connected from ::1:35060
+[I 201118 22:54:39 web:2239] 200 GET /?username=uldarik&password=b%27dbmE1cML%27&hostname=localhost&command=sudo%20lxc%20exec%20boogiepitcloud%20bash (::1) 1.13ms
+[I 201118 22:54:39 web:2239] 200 GET /static/css/bootstrap.min.css (::1) 0.97ms
+[I 201118 22:54:39 web:2239] 200 GET /static/css/xterm.min.css (::1) 0.81ms
+[I 201118 22:54:39 web:2239] 200 GET /static/css/fullscreen.min.css (::1) 1.11ms
+[I 201118 22:54:39 web:2239] 200 GET /static/js/jquery.min.js (::1) 1.56ms
+[I 201118 22:54:39 web:2239] 200 GET /static/js/popper.min.js (::1) 2.12ms
+[I 201118 22:54:39 web:2239] 200 GET /static/js/bootstrap.min.js (::1) 2.39ms
+[I 201118 22:54:39 web:2239] 200 GET /static/js/xterm.min.js (::1) 1.56ms
+[I 201118 22:54:39 web:2239] 200 GET /static/js/main.js (::1) 1.91ms
+[I 201118 22:54:39 web:2239] 200 GET /static/js/xterm-addon-fit.min.js (::1) 0.74ms
+[I 201118 22:56:27 web:2239] 200 GET /?username=uldarik&password=ZGJtRTFjTUw=&hostname=localhost&command=sudo%20lxc%20exec%20boogiepit%20bash (::1) 0.85ms
+[I 201118 22:56:27 handler:447] Connecting to localhost:22
+[I 201118 22:56:27 transport:1819] Connected (version 2.0, client OpenSSH_8.2p1)
+[I 201118 22:56:27 handler:87] Trying password authentication
+[I 201118 22:56:27 transport:1819] Authentication (password) successful!
+[I 201118 22:56:27 web:2239] 200 POST /?username=uldarik&password=ZGJtRTFjTUw=&hostname=localhost&command=sudo%20lxc%20exec%20boogiepit%20bash (::1) 476.84ms
+[I 201118 22:56:27 web:2239] 101 GET /ws?id=140619754523376 (::1) 0.39ms
+[I 201118 22:56:27 handler:533] Connected from ::1:34806
+[I 201118 22:58:49 web:2239] 200 GET /?username=uldarik&password=ZGJtRTFjTUw=&hostname=localhost&command=sudo%20lxc%20exec%20boogiepit%20bash (::1) 0.93ms
+[I 201118 22:58:49 handler:447] Connecting to localhost:22
+[I 201118 22:58:49 transport:1819] Connected (version 2.0, client OpenSSH_8.2p1)
+[I 201118 22:58:49 handler:87] Trying password authentication
+[I 201118 22:58:49 transport:1819] Authentication (password) successful!
+[I 201118 22:58:50 web:2239] 200 POST /?username=uldarik&password=ZGJtRTFjTUw=&hostname=localhost&command=sudo%20lxc%20exec%20boogiepit%20bash (::1) 495.31ms
+[I 201118 22:58:50 web:2239] 101 GET /ws?id=140619737554656 (::1) 0.34ms
+[I 201118 22:58:50 handler:533] Connected from ::1:36192
+[I 201118 22:59:13 handler:579] Disconnected from ::1:34806
+[I 201118 22:59:13 worker:114] Closing worker 140619754523376 with reason: client disconnected
+[I 201118 22:59:13 worker:122] Connection to localhost:22 lost
+[I 201118 22:59:14 handler:579] Disconnected from ::1:36192
+[I 201118 22:59:14 worker:114] Closing worker 140619737554656 with reason: client disconnected
+[I 201118 22:59:14 worker:122] Connection to localhost:22 lost
+[I 201118 22:59:36 web:2239] 200 GET /?username=uldarik&password=ZGJtRTFjTUw=&hostname=localhost&command=sudo%20lxc%20exec%20osticket%20bash (::1) 0.67ms
+[I 201118 22:59:36 handler:447] Connecting to localhost:22
+[I 201118 22:59:36 transport:1819] Connected (version 2.0, client OpenSSH_8.2p1)
+[I 201118 22:59:36 handler:87] Trying password authentication
+[I 201118 22:59:36 transport:1819] Authentication (password) successful!
+[I 201118 22:59:37 web:2239] 200 POST /?username=uldarik&password=ZGJtRTFjTUw=&hostname=localhost&command=sudo%20lxc%20exec%20osticket%20bash (::1) 465.78ms
+[I 201118 22:59:37 web:2239] 101 GET /ws?id=140619754393952 (::1) 0.38ms
+[I 201118 22:59:37 handler:533] Connected from ::1:36642
+[I 201118 23:03:00 web:2239] 200 GET /?username=batman&password=Y2xpdG9yaXM=&hostname=localhost&command=sudo%20lxc%20exec%20multiartcreation%20bash (::1) 0.90ms
+[I 201118 23:03:00 handler:447] Connecting to localhost:22
+[I 201118 23:03:01 transport:1819] Connected (version 2.0, client OpenSSH_8.2p1)
+[I 201118 23:03:01 handler:87] Trying password authentication
+[I 201118 23:03:01 transport:1819] Authentication (password) successful!
+[I 201118 23:03:01 web:2239] 200 POST /?username=batman&password=Y2xpdG9yaXM=&hostname=localhost&command=sudo%20lxc%20exec%20multiartcreation%20bash (::1) 475.95ms
+[I 201118 23:03:01 web:2239] 101 GET /ws?id=140619754559424 (::1) 0.36ms
+[I 201118 23:03:01 handler:533] Connected from ::1:38586
+[I 201118 23:09:51 web:2239] 200 GET /?username=batman&password=Y2xpdG9yaXM=&hostname=localhost&command=sudo%20lxc%20exec%20multiartcreation%20bash (::1) 0.78ms
+[I 201118 23:09:51 handler:447] Connecting to localhost:22
+[I 201118 23:09:51 transport:1819] Connected (version 2.0, client OpenSSH_8.2p1)
+[I 201118 23:09:51 handler:87] Trying password authentication
+[I 201118 23:09:51 transport:1819] Authentication (password) successful!
+[I 201118 23:09:51 web:2239] 200 POST /?username=batman&password=Y2xpdG9yaXM=&hostname=localhost&command=sudo%20lxc%20exec%20multiartcreation%20bash (::1) 499.30ms
+[I 201118 23:09:51 web:2239] 101 GET /ws?id=140619754394672 (::1) 0.39ms
+[I 201118 23:09:51 handler:533] Connected from ::1:42452
+[I 201121 18:54:39 handler:579] Disconnected from ::1:38586
+[I 201121 18:54:39 worker:114] Closing worker 140619754559424 with reason: client disconnected
+[I 201121 18:54:39 worker:122] Connection to localhost:22 lost
+[I 201121 20:28:09 web:2239] 200 GET / (::1) 1.51ms
+[I 201121 20:28:09 web:2239] 200 GET /static/css/bootstrap.min.css (::1) 0.82ms
+[I 201121 20:28:09 web:2239] 200 GET /static/js/jquery.min.js (::1) 1.25ms
+[I 201121 20:28:09 web:2239] 200 GET /static/js/popper.min.js (::1) 1.24ms
+[I 201121 20:28:09 web:2239] 200 GET /static/js/bootstrap.min.js (::1) 1.89ms
+[I 201121 20:28:09 web:2239] 200 GET /static/js/xterm.min.js (::1) 1.43ms
+[I 201121 20:28:09 web:2239] 304 GET /static/css/xterm.min.css (::1) 1.86ms
+[I 201121 20:28:09 web:2239] 304 GET /static/css/fullscreen.min.css (::1) 0.98ms
+[I 201121 20:28:09 web:2239] 200 GET /static/js/main.js (::1) 0.72ms
+[I 201121 20:28:09 web:2239] 304 GET /static/js/xterm-addon-fit.min.js (::1) 0.41ms
+[2020/11/22 04:20:23:0846] N: ttyd 1.6.1-079aa68 (libwebsockets 4.0.19)
+[2020/11/22 04:20:23:0847] N: tty configuration:
+[2020/11/22 04:20:23:0847] N:   credential: YWRtaW46ZGJtRTFjTUw=
+[2020/11/22 04:20:23:0848] N:   start command: lxc exec netscan bash > ttyd.log 2>&1 && echo $1 > ttyd_pid.txt
+[2020/11/22 04:20:23:0848] N:   close signal: SIGHUP (1)
+[2020/11/22 04:20:23:0848] N:   terminal type: xterm-256color
+[2020/11/22 04:20:23:0849] N:  Using foreign event loop...
+[2020/11/22 04:20:23:0850] E: ERROR on binding fd 11 to port 7681 (-1 98)
+[2020/11/22 04:20:23:0850] E: init server failed
+[2020/11/22 04:20:23:0851] E: libwebsockets vhost creation failed
+[2020/11/22 04:23:46:6340] N: ttyd 1.6.1-079aa68 (libwebsockets 4.0.19)
+[2020/11/22 04:23:46:6340] N: tty configuration:
+[2020/11/22 04:23:46:6341] N:   credential: dWxkYXJpazpkYm1FMWNNTA==
+[2020/11/22 04:23:46:6341] N:   start command: lxc exec mail bash > ttyd.log 2>&1 && echo $1 > ttyd_pid.txt
+[2020/11/22 04:23:46:6341] N:   close signal: SIGHUP (1)
+[2020/11/22 04:23:46:6341] N:   terminal type: xterm-256color
+[2020/11/22 04:23:46:6342] N:  Using foreign event loop...
+[2020/11/22 04:23:46:6343] E: ERROR on binding fd 11 to port 7681 (-1 98)
+[2020/11/22 04:23:46:6343] E: init server failed
+[2020/11/22 04:23:46:6343] E: libwebsockets vhost creation failed
+[I 201121 23:30:18 web:2239] 200 GET /?command=sudo%20lxc%20exec%20belougacloud%20bash (::1) 1.34ms
+[I 201121 23:30:18 handler:579] Disconnected from ::1:59582
+[I 201121 23:30:18 worker:114] Closing worker 140619780701584 with reason: client disconnected
+[I 201121 23:30:18 worker:122] Connection to localhost:22 lost
+[I 201121 23:30:18 web:2239] 200 GET /static/img/favicon.png (::1) 0.66ms
+[I 201122 17:39:08 handler:579] Disconnected from ::1:53702
+[I 201122 17:39:08 worker:114] Closing worker 140619780034464 with reason: client disconnected
+[I 201122 17:39:08 worker:122] Connection to localhost:22 lost
+[I 201122 17:39:08 handler:579] Disconnected from ::1:42452
+[I 201122 17:39:08 worker:114] Closing worker 140619754394672 with reason: client disconnected
+[I 201122 17:39:08 worker:122] Connection to localhost:22 lost
+[I 201122 17:39:08 handler:579] Disconnected from ::1:36642
+[I 201122 17:39:08 worker:114] Closing worker 140619754393952 with reason: client disconnected
+[I 201122 17:39:08 worker:122] Connection to localhost:22 lost
+[I 201122 17:39:08 handler:579] Disconnected from ::1:35060
+[I 201122 17:39:08 worker:114] Closing worker 140619737513216 with reason: client disconnected
+[I 201122 17:39:08 worker:122] Connection to localhost:22 lost

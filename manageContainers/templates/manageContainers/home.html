@@ -4,6 +4,9 @@
 <html>
 	<head>
 		{% load static %}
+		
+        <script src="{% static 'node_modules/xterm/lib/xterm.js' %}"></script>
+		
 		<link rel="stylesheet" type="text/css" href="{% static 'manageContainers/style.css' %}">
 		<link rel="icon" 
       type="image/png" 
@@ -19,7 +22,9 @@
 			height: 30px;
 			background-color: red;
 			}
+
 		</style>
+
 		<title>
 			{{hostName}}'s LXD Control Center
 		</title>
@@ -48,6 +53,10 @@
 					<input class="button" onclick="return confirm('You\'re about to start a container, \nare you sure you wanna do that ?')" type="submit" value="Start" name="_start"><br><br>
 					<input class="button" onclick="return confirm('You\'re about to restart a container, \nare you sure you wanna do that ?')"type="submit" value="Restart" name="_restart"><br><br>
 					<input class="button" onclick="return confirm('You\'re about to delete a container, \nare you sure you wanna do that ?')"type="submit" value="Delete" name="_delete"><br><br>
+					Host Username:
+					<input type="text" name="hostUserName" >
+					Host Password:
+					<input type="password" name="hostUserPassword">
 					<input class="button" type="submit" value="Open in terminal" name="_terminal"><br><br>
 			</div>
 			</form>
@@ -94,6 +103,8 @@
 			</form> {% endcomment %}
 		</div>
 		<div class="column2" >
+			
+      	
 			<h2>{{ hostName }}'s system state</h2>
 			cpu usage {{ cpuPercent }} % 
 			<div id="cpuPercent">
@@ -129,7 +140,8 @@
 			  });
 
 			}
-		</script>         
+		</script> 
+    
 	</body>
 </html>
 

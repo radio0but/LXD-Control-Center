@@ -36,11 +36,11 @@
 ## Make sure to be in the right folder for the apps pid files                     ##
 cd /opt/LXD-Control-Center                                                        ##
 ## Kill LXDCC                                                                     ##
-kill -9 `cat runserver_pid.txt`                                                   ##
+fuser -k 8082/tcp                                                   ##
 ## Remove LXDCC pid file                                                          ##         
 rm runserver_pid.txt                                                              ##
 ## Kill webssh                                                                    ##
-kill -9 `cat webssh_pid.txt`                                                      ##
+fuser -k 8989/tcp                                                   ##
 ## Remove webssh pid file                                                         ##
 rm webssh_pid.txt                                                                 ##
 ##                                                                                ##

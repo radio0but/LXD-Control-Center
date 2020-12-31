@@ -178,28 +178,6 @@ def output(request):
                 str4 = "&hostname=localhost&command=sudo lxc exec " + containerName
                 str5 = " bash\" target=\"_blank\"><h2>Open webssh</h2></a></div></div> <div id=\"terminal\"></div>" 
                 out = str1 + str2 + str3 + str4 + str5
-                ## ttyd
-                # unampsswd = userName + ":" + password
-                # subprocess.run([
-                #     "nohup",  
-                #     "manageContainers/BASH/ttyd_linux", 
-                #     "-c" , 
-                #     unampsswd  , 
-                #     "lxc", 
-                #     "exec" ,
-                #     containerName, 
-                #     "bash" , 
-                #     ">", 
-                #     "ttyd.log", 
-                #     "2>&1", 
-                #     "&&" , 
-                #     "echo",
-                #     "$1",
-                #     ">",
-                #     "ttyd_pid.txt" 
-                #     ] )
-                out = "<div class=\"footer\"><button class=\"accordion\"><h2>Need Name</h2></button><div class=\"panel\">  <iframe src+\"" + ttydAdress
-                out = out + "\"> </iframe> <form action=\"output\" method=\"post\"> {% csrf_token %} <br><input class=\"button\" type=\"submit\" value=\"List Images\" name=\"_closeterminal\"> </form> </div><div id=\"terminal\"></div></div>"
 
             else:
                 str1 = "Ok i ment opening the terminal inside a container ... <br> Here is a link to a simple ssh terminal   <br>...<br>"

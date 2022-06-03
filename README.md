@@ -11,6 +11,7 @@ Link to the webssh project:
 https://github.com/huashengdun/webssh
 
 ![alt text](https://imgur.com/7zcIV74.png "Screenshot By the way lydianna is the hostame of the computer it was runnin on.")
+By the way lydianna is the hostame of the computer it was runnin on.
 
 ### On many linux distro to install and initialize lxd
 
